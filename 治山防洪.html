@@ -1,0 +1,206 @@
+﻿<html>
+<head>
+<head>
+		<title>GIS NO LAZY</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ArcGIS JavaScript Tutorials: Display a Web Map</title>
+  <style>
+    html, body, #viewDiv1{
+      padding: 0;
+      margin: 0;
+      height: 90%;
+      width: 100%;
+    }
+	 #viewDiv2{
+      padding: 0;
+      margin: 0;
+      height: 90%;
+      width: 100%;
+    }
+	#viewDiv3{
+      padding: 0;
+      margin: 0;
+      height: 90%;
+      width: 100%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.13/"></script>
+  <script>
+    require([ 
+      "esri/WebMap",
+      "esri/views/MapView",
+	  "esri/widgets/LayerList"
+    ], function(WebMap, MapView, LayerList) {
+
+      var webmap = new WebMap({
+        portalItem: {
+          id: "12169d4b085b431c8385bf945fbb8153"
+        }
+      });
+
+      var view = new MapView({
+        container: "viewDiv1",
+        map: webmap
+      });
+	  
+	  //LayerList: 控制圖層開關		
+      view.when(function() {
+        var layerlist = new LayerList({
+          view: view,
+        });
+			//增加layerlist的widget
+        view.ui.add(layerlist, "bottom-right"); 
+      });		  
+      
+    });
+	
+    require([ 
+      "esri/WebMap",
+      "esri/views/MapView",
+	  "esri/widgets/LayerList"
+    ], function(WebMap, MapView, LayerList) {
+
+      var webmap = new WebMap({
+        portalItem: {
+          id: "840986f1fa6f4f59879b5254fce4c7c0"
+        }
+      });
+
+      var view = new MapView({
+        container: "viewDiv2",
+        map: webmap
+      });
+	  
+	  //LayerList: 控制圖層開關		
+      view.when(function() {
+        var layerlist = new LayerList({
+          view: view,
+        });
+			//增加layerlist的widget
+        view.ui.add(layerlist, "bottom-right"); 
+      });		
+	}); 
+  </script>
+</head>
+<body>
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">營造永續環境</a></h1>
+						<span>GIS NO LAZY</span>
+					</div>
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li class="active"><a href="index.html">Homepage</a></li>
+							<li><a href="air.html">空氣汙染</a></li>
+							<li><a href="治山防洪.html">治山防洪</a></li>
+							<li><a href="噪音汙染.html">噪音汙染</a></li>
+							<li><a href="spongecity.html">韌性城市</a></li>
+							<li><a href="reduce.html">減少資源耗用</a></li>
+						</ul>
+					</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+			
+	<!-- Main -->
+		<div id="main"><font face="微軟正黑體" size=4>
+			<div class="container">
+				<div class="row">
+
+					<!-- Content -->
+						<div id="content" class="12u skel-cell-important">
+							<section>
+								<header>
+									
+									<h2 align="center"> <img src="https://img.icons8.com/color/48/000000/mountain.png" align="center"><br><br>治山防洪</h2>
+									<span class="byline" align="center">水土保持從你我做起</span>	
+										
+								</header>
+									
+								
+									<p>由於台灣地區地理環境及立地條件特殊，颱風、地震頻仍，加以地質構造脆弱、河短流急，年降雨量極豐富，每逢颱風豪雨來襲，崩塌及土石隨洪流而下 氾濫成災。為防止集水區崩塌及砂石下移，減輕洪患，延長水庫壽命，促進經 濟建設及國土保安，加強治山防災為極重要之措施。</p>
+									<p>臺北市政府工務局在治山防洪部分，針對臺北市易淹水區域、違規使用山坡地者、山坡地治理改善、防洪減災設施等面向採取積極作為，降低災害對人民生命財產安全的威脅。
+										<br><br>
+								
+								
+									</p>
+								<h2>治山</h2>
+								
+									
+									<p>森林雖可防洪、保持水土、涵養水源， 究其功能仍有其極限，而倘超過其極限者，無論其有多茂密之森林覆蓋，仍會發生崩坍。其除藉森林機能治水外，仍需以工程方法加以補救其不足，因此治山防洪之實施，勢所必需。再加上臺灣特殊的地理構造，每逢颱風或是季節性豪大雨，皆會有產生土石流等災害，影響民眾的生命財產的安全，因此土石流預防也屬於政府的施政重點。</p>
+									<div id="viewDiv1"></div>
+									<br><br><br>
+								<p>
+							
+								<h2>防洪</h2>
+							
+									<p>台北市四周為丘陵地，中央地勢低平，為標準的的盆地，再加上每逢颱風或是季節性豪大雨，若沒有做好完善的防洪設施，便會有很高的機率發生水災，影響民眾的生活品質，甚至也會有生命及財產上的安危。</p>
+									<div id="viewDiv2"></div>	
+									<p>降雨淹水潛勢圖，使用將水情況有 78.8mm/hr、100mm/hr、130mm/hr，各顏色含義：<br>
+										黃色 水深 15～30cm<br>
+										藍色 水深 30cm～1m<br>
+										紅色 水深 1～2m<br>
+										<br>
+										台北市捷運防洪系統 TpeMRTStations_waterheight：捷運大部分路線均置於地下，為避免遭受水患，在系統設計上均有一定之防洪保護設施。<br>
+										Name ：捷運站名<br>
+										Height ： 實際防洪高程<br>
+										防洪設計高度為「二百年頻率洪水位加五十公分出水高度」，其防護原則與方式係於上述洪水保護標準下之所有開口(含出土段)及機廠均能有效地防止地面洪水灌入。<br><br><br><br><br><br>
+
+						</div>
+						<p><br><br><br><br><br><br><br><br><br><br></p>
+						<body>
+						<section>
+							<header>
+								<h2>相關主題</h2>
+							</header>
+							<p>治山防洪相關資訊</p>
+							<ul class="default">
+							<li><a href="https://www.ncdr.nat.gov.tw/" title="國家災害防救科技中心">國家災害防救科技中心</a></li>
+							<li><a href="https://www.gov.taipei/News.aspx?n=D07E52F0FF169E83&sms=4F76BD4E1FD15647" title="臺北市政府市長施政報告">臺北市政府市長施政報告</a></li>
+							<li><a href="https://pwd.gov.taipei/" title="臺北市政府工務局">臺北市政府工務局</a></li>
+							</ul>
+						</section></font>
+						</body>
+					<!-- /Content -->
+	<!-- Main -->
+	
+<!-- Footer -->
+		<!-- <div id="footer">
+			<div class="container">
+				<div class="row">
+					
+							
+							
+				</div>
+			</div>
+		</div> --!>
+	<!-- Footer --> 
+
+	<!-- Copyright -->
+</html>
